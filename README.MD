@@ -69,4 +69,4 @@ $ npm run lint
 
 ## License
 
-MIT © [Tim Meitz](mailto:info@danios.net)
+MIT © [Retailify GmbH](mailto:info@retailify.de)
