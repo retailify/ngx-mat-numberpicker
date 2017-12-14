@@ -26,6 +26,10 @@
     "angular", "material"
   ],
   "license": "MIT",
+  "contributors": [
+    "Thomas Meitz <meitz@jproxx.com>",
+    "Tim Meitz <info@danios.net>"
+  ],
   "bugs": {
     "url": "https://github.com/retailify/ngx-mat-numberpicker/issues"
   },
