@@ -1,5 +1,5 @@
-<button mat-icon-button (click)="decrease()"><mat-icon>remove_circle_outline</mat-icon></button>
+<button mat-icon-button (click)="decrease($event)"><mat-icon>remove_circle_outline</mat-icon></button>
 <mat-form-field>
     <input matInput #inputNumberPickerControl name="numberPickerInputField" [value]="numberPickerValue" style="text-align:center;">
 </mat-form-field>
-<button mat-icon-button (click)="increase()"><mat-icon>add_circle_outline</mat-icon></button>
+<button mat-icon-button (click)="increase($event)"><mat-icon>add_circle_outline</mat-icon></button>

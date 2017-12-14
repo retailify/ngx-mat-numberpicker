@@ -12,11 +12,13 @@ export class NumberPickerComponent {
         this.numberPickerValue = 0;
     }
 
-    increase(): void {
+    increase(event: any): void {
+        event.preventDefault();
         this.numberPickerValue++;
     }
 
-    decrease(): void {
+    decrease(event: any): void {
+        event.preventDefault();
         this.numberPickerValue--;
     }
 
