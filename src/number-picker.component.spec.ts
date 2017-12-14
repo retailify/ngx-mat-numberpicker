@@ -1,22 +1,23 @@
+import {} from 'jasmine';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
 import { DebugElement }    from '@angular/core';
 
-import { SampleComponent } from './sample.component';
+import { NumberPickerComponent } from './number-picker.component';
 
-describe('SampleComponent', () => {
+describe('NumberPickerComponent', () => {
 
-  let comp:    SampleComponent;
-  let fixture: ComponentFixture<SampleComponent>;
+  let comp:    NumberPickerComponent;
+  let fixture: ComponentFixture<NumberPickerComponent>;
   let de:      DebugElement;
   let el:      HTMLElement;
 
-  beforeEach(() => {
+  /*beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ SampleComponent ], // declare the test component
+      declarations: [ NumberPickerComponent ], // declare the test component
     });
 
-    fixture = TestBed.createComponent(SampleComponent);
+    fixture = TestBed.createComponent(NumberPickerComponent);
 
     comp = fixture.componentInstance; // BannerComponent test instance
 
@@ -27,5 +28,5 @@ describe('SampleComponent', () => {
 
   it('Should be false', () => {
     expect(false).toBe(true);
-  });
+  });*/
 });

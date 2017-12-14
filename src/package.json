@@ -6,13 +6,17 @@
     "url": "https://github.com/retailify/ngx-mat-numberpicker"
   },
   "author": {
-    "name": "Tim Meitz",
-    "email": "info@danios.net"
+    "name": "Retailify GmbH",
+    "email": "info@retailify.de"
   },
   "keywords": [
-    "angular"
+    "angular", "material"
   ],
   "license": "MIT",
+  "contributors": [
+    "Thomas Meitz <thomas.meitz@retailify.de>",
+    "Tim Meitz <info@danios.net>"
+  ],
   "bugs": {
     "url": "https://github.com/retailify/ngx-mat-numberpicker/issues"
   },
@@ -22,7 +26,7 @@
   "typings": "ngx-mat-numberpicker.d.ts",
   "peerDependencies": {
     "@angular/core": "^4.0.0",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "@angular/flex-layout": "^2.0.0",
+    "@angular/material": "^2.0.0"
   }
 }
