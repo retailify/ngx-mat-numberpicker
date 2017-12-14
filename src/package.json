@@ -1,0 +1,28 @@
+{
+  "name": "ngx-mat-numberpicker",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retailify/ngx-mat-numberpicker"
+  },
+  "author": {
+    "name": "Tim Meitz",
+    "email": "info@danios.net"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/retailify/ngx-mat-numberpicker/issues"
+  },
+  "main": "ngx-mat-numberpicker.umd.js",
+  "module": "ngx-mat-numberpicker.js",
+  "jsnext:main": "ngx-mat-numberpicker.js",
+  "typings": "ngx-mat-numberpicker.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
