@@ -1,24 +1,24 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SampleComponent } from './sample.component';
+import { NumberPickerComponent } from './number-picker.component';
 
-export * from './sample.component';
+export * from './number-picker.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    SampleComponent,
+      NumberPickerComponent,
   ],
   exports: [
-    SampleComponent,
+      NumberPickerComponent,
   ]
 })
-export class SampleModule {
+export class NumberPickerModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SampleModule,
+      ngModule: NumberPickerModule,
       providers: []
     };
   }

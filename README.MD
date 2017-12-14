@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'ngx-mat-numberpicker';
+import { NumberPickerModule } from 'ngx-mat-numberpicker';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { SampleModule } from 'ngx-mat-numberpicker';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    NumberPickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -50,7 +50,7 @@ Once your library is imported, you can use its components, directives and pipes 
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
+<ngx-mat-numberpicker></ngx-mat-numberpicker>
 ```
 
 ## Development
@@ -69,4 +69,4 @@ $ npm run lint
 
 ## License
 
-MIT © [Tim Meitz](mailto:info@danios.net)
+MIT © [Retailify GmbH](mailto:info@retailify.de)
