@@ -25,8 +25,13 @@
   "jsnext:main": "ngx-mat-numberpicker.js",
   "typings": "ngx-mat-numberpicker.d.ts",
   "peerDependencies": {
+    "@angular/animations": "5.0.0",
     "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/cdk": "5.0.1",
     "@angular/flex-layout": "^2.0.0",
-    "@angular/material": "^2.0.0"
+    "@angular/material": "^2.0.0",
+    "tslib": "1.8.0"
+
   }
 }

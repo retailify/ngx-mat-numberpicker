@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'ngx-mat-numberpicker',
-  template: `numberpicker works`
+  templateUrl: './number-picker.component.html'
 })
 export class NumberPickerComponent {
 

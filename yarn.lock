@@ -6,6 +6,18 @@
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/8fold-marked/-/8fold-marked-0.3.9.tgz#bb89c645612f8ccfaffac1ca6e3c11f168c9cf59"
 
+"@angular/animations@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.0.0.tgz#b5ad199c67f93f759544477effe6679e154991fb"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/cdk@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-5.0.1.tgz#c85e662fe2e1c58abde1dea0f0f18cdfcffc2066"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/common@^5.0.0":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.1.1.tgz#b6444cf6508f9b0b5fc4c9b3107b3e37be1336c9"
@@ -30,6 +42,24 @@
 "@angular/core@^5.0.0":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.1.1.tgz#b6a6e2b2284f86279f096d857253f6643098d908"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/flex-layout@^2.0.0":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@angular/flex-layout/-/flex-layout-2.0.0-beta.10.tgz#704e0626d6a92defbef2434e138e30f801fb2ad6"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/forms@^4.0.0":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-4.4.6.tgz#fe64ace42435c1b80f49034b7c41ce8caf14a44a"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/material@^2.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-5.0.0.tgz#2ae8610f36cd6aa5bfe58155ffd96bf44d965162"
   dependencies:
     tslib "^1.7.1"
 
@@ -5180,6 +5210,10 @@ tsickle@^0.25.5:
     mkdirp "^0.5.1"
     source-map "^0.5.6"
     source-map-support "^0.4.2"
+
+tslib@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.8.0.tgz#dc604ebad64bcbf696d613da6c954aa0e7ea1eb6"
 
 tslib@^1.7.1:
   version "1.8.1"

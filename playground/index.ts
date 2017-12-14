@@ -6,18 +6,18 @@ import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { SampleModule }  from 'ngx-mat-numberpicker';
+import { NumberPickerModule }  from '../dist';
 
 @Component({
-  selector: 'app',
-  template: `<sample-component></sample-component>`
+    selector: 'qs-app',
+    template: `<ngx-mat-numberpicker></ngx-mat-numberpicker>`,
 })
 class AppComponent {}
 
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ],
-  imports: [ BrowserModule, SampleModule ]
+  imports: [ BrowserModule, NumberPickerModule ]
 })
 class AppModule {}
 
