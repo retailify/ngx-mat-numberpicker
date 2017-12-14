@@ -5,7 +5,7 @@
 To install this library, run:
 
 ```bash
-$ npm install ngx-mat-numberpicker --save
+$ npm install @retailify/ngx-mat-numberpicker --save
 ```
 
 ## Consuming your library
@@ -13,7 +13,7 @@ $ npm install ngx-mat-numberpicker --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install ngx-mat-numberpicker
+$ npm install @retailify/ngx-mat-numberpicker
 ```
 
 and then from your Angular `AppModule`:
@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { NumberPickerModule } from 'ngx-mat-numberpicker';
+import { NumberPickerModule } from '@retailify/ngx-mat-numberpicker';
 
 @NgModule({
   declarations: [

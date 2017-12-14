@@ -6,7 +6,18 @@ import { Component } from '@angular/core';
 })
 export class NumberPickerComponent {
 
-  constructor() {
-  }
+    numberPickerValue: number;
+
+    constructor() {
+        this.numberPickerValue = 0;
+    }
+
+    increase(): void {
+        this.numberPickerValue++;
+    }
+
+    decrease(): void {
+        this.numberPickerValue--;
+    }
 
 }
