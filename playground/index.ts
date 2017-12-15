@@ -11,14 +11,22 @@ import { NumberPickerModule }  from '../dist';
 
 @Component({
     selector: 'qs-app',
-    template: `<ngx-mat-numberpicker></ngx-mat-numberpicker>`,
+    template: `<ngx-mat-numberpicker [min]="1" [max]="6" [default]="1"
+                                     [starttext]="'Hello World'" [endtext]="'Hello World'"
+                                     [disabled]="true" (onChange)="onValueChanged($event)"></ngx-mat-numberpicker>
+               <p>Current Value: {{currentValue}}</p>`,
 })
-class AppComponent {}
+class AppComponent {
+    currentValue: number = 1;
+    onValueChanged(value: number): void {
+        this.currentValue = value;
+    }
+}
 
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ],
-  imports: [ BrowserModule, BrowserAnimationsModule, NumberPickerModule ]
+  imports: [ BrowserModule, BrowserAnimationsModule, NumberPickerModule ],
 })
 class AppModule {}
 

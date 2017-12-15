@@ -1,6 +1,6 @@
 {
   "name": "@retailify/ngx-mat-numberpicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -25,6 +25,9 @@
   },
   "keywords": [
     "angular",
+    "angular5",
+    "material component",
+    "number picker",
     "material"
   ],
   "license": "MIT",

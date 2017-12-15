@@ -1,19 +1,33 @@
 # ngx-mat-numberpicker
 
+Angular numberpicker component based on Angular Material.
+
 ## Installation
 
-To install this library, run:
+To install this library (component), run:
 
+Using npm:
 ```bash
 $ npm install @retailify/ngx-mat-numberpicker --save
 ```
 
-## Consuming your library
+Using yarn:
+```bash
+$ yarn add @retailify/ngx-mat-numberpicker
+```
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
+## Consuming this library (component)
 
+You can import this library (component) in any Angular application by running:
+
+Using npm:
 ```bash
 $ npm install @retailify/ngx-mat-numberpicker
+```
+
+Using yarn:
+```bash
+$ yarn add @retailify/ngx-mat-numberpicker
 ```
 
 and then from your Angular `AppModule`:
@@ -24,7 +38,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
+// Import this library
 import { NumberPickerModule } from '@retailify/ngx-mat-numberpicker';
 
 @NgModule({
@@ -33,8 +47,8 @@ import { NumberPickerModule } from '@retailify/ngx-mat-numberpicker';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
+    
+    // Specify this library as an import
     NumberPickerModule,
   ],
   providers: [],
@@ -43,14 +57,24 @@ import { NumberPickerModule } from '@retailify/ngx-mat-numberpicker';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once this library is imported, you can use its components, directives and pipes in your Angular application:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
+<!-- You can now use this library component in app.component.html -->
 <h1>
   {{title}}
 </h1>
-<ngx-mat-numberpicker [min]="1" [max]="6" [default]="1" [disabled]="true" (onChange)="onValueChanged($event)"></ngx-mat-numberpicker>
+<ngx-mat-numberpicker [min]="1" [max]="6" [default]="1" [starttext]="'Hello World'" [endtext]="'Hello World'" [disabled]="true" (onChange)="onValueChanged($event)"></ngx-mat-numberpicker>
+```
+
+```typescript
+class YourClass {
+    currentValue: number = 1;
+    
+    onValueChanged(value: number): void {
+        this.currentValue = value;
+    }
+}
 ```
 ### Component Inputs and Outputs ###
 | Attribute        | Type           | Required  | Description |
@@ -58,6 +82,8 @@ Once your library is imported, you can use its components, directives and pipes 
 | min | [input] Number | No | The minimal number limit on the number picker. 0 by default |
 | max | [input] Number | No | The maximum number limit on the number picker. 50 by default |
 | default | [input] Number | No | The default value for the number picker. 0 by default |
+| starttext | [input] String | No | The value for the hint starttext of the inputfield. Empty by default |
+| endtext | [input] String | No | The value for the hint endtext of the inputfield. Empty by default |
 | disabled | [input] Boolean | No | Defines if the input input field should be disabled / enabled by the user. false by default |
 | onChange | (output) Number | No | The onChange event of the component. Emits the value of the number picker, every time the user has clicked the - or + button. |
 
@@ -73,6 +99,12 @@ To lint all `*.ts` files:
 
 ```bash
 $ npm run lint
+```
+
+To run demo:
+
+```bash
+$ npm run playground
 ```
 
 ## License
