@@ -2,7 +2,7 @@
 
 Angular numberpicker component based on Angular Material.
 
-[[https://github.com/retailify/ngx-mat-numberpicker/blob/master/images/example.png|alt=example image]]
+![alt example image](https://github.com/retailify/ngx-mat-numberpicker/blob/master/images/example.png)
 
 ## Installation
 
