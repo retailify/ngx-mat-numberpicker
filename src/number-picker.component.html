@@ -1,5 +1,7 @@
-<button mat-icon-button (click)="decrease($event)"><mat-icon>remove_circle_outline</mat-icon></button>
-<mat-form-field>
-    <input matInput #inputNumberPickerControl name="numberPickerInputField" [value]="numberPickerValue" style="text-align:center;">
-</mat-form-field>
-<button mat-icon-button (click)="increase($event)"><mat-icon>add_circle_outline</mat-icon></button>
+<span flex>
+    <button mat-icon-button (click)="decrease($event)" [disabled]="decreaseButtonDisabled"><mat-icon>remove_circle_outline</mat-icon></button>
+    <mat-form-field flex>
+        <input matInput #inputNumberPickerControl name="numberPickerInputField" [value]="numberPickerValue" style="text-align:center;" [disabled]="disabled" >
+    </mat-form-field>
+    <button mat-icon-button (click)="increase($event)" [disabled]="increaseButtonDisabled"><mat-icon style="padding-bottom: 2px; padding-left: 1px;">add_circle_outline</mat-icon></button>
+</span>

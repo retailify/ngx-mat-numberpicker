@@ -50,8 +50,16 @@ Once your library is imported, you can use its components, directives and pipes 
 <h1>
   {{title}}
 </h1>
-<ngx-mat-numberpicker></ngx-mat-numberpicker>
+<ngx-mat-numberpicker [min]="1" [max]="6" [default]="1" [disabled]="true" (onChange)="onValueChanged($event)"></ngx-mat-numberpicker>
 ```
+### Component Inputs and Outputs ###
+| Attribute        | Type           | Required  | Description |
+| :------------- |:-------------| :-----:| :-----|
+| min | [input] Number | No | The minimal number limit on the number picker. 0 by default |
+| max | [input] Number | No | The maximum number limit on the number picker. 50 by default |
+| default | [input] Number | No | The default value for the number picker. 0 by default |
+| disabled | [input] Boolean | No | Defines if the input input field should be disabled / enabled by the user. false by default |
+| onChange | (output) Number | No | The onChange event of the component. Emits the value of the number picker, every time the user has clicked the - or + button. |
 
 ## Development
 
