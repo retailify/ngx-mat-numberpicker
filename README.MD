@@ -2,6 +2,8 @@
 
 Angular numberpicker component based on Angular Material.
 
+[[https://github.com/retailify/ngx-mat-numberpicker/blob/master/images/example.png|alt=example image]]
+
 ## Installation
 
 To install this library (component), run:
