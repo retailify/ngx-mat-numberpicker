@@ -1,6 +1,6 @@
 {
   "name": "@retailify/ngx-mat-numberpicker",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/retailify/ngx-mat-numberpicker"
