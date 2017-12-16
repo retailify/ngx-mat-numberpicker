@@ -26,8 +26,8 @@ export class NumberPickerComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.defaultValueSet();
-        this.hintTextsSet();
+        this.setDefaultValue();
+        this.setHintTexts();
         this.checkButtons();
     }
 
@@ -51,16 +51,14 @@ export class NumberPickerComponent implements OnInit {
 
     checkButtons(): void {
         this.increaseButtonDisabled = false;
-        this.decreaseButtonDisabled = false;
-        if (this.getValue() <= this.min) {
-            this.decreaseButtonDisabled = true;
-        }
+
+        this.decreaseButtonDisabled = this.getValue() <= this.min;
         if (this.numberPickerValue >= this.max) {
             this.increaseButtonDisabled = true;
         }
     }
 
-    defaultValueSet(): void {
+    setDefaultValue(): void {
         if (this.default === null || this.default === undefined) {
             this.setValue(0);
         } else {
@@ -68,7 +66,7 @@ export class NumberPickerComponent implements OnInit {
         }
     }
 
-    hintTextsSet(): void {
+    setHintTexts(): void {
         this.setHintStartText(this.starttext);
         this.setHintEndText(this.endtext);
     }
