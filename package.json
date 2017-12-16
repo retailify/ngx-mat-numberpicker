@@ -27,12 +27,14 @@
     "angular",
     "angular5",
     "material component",
+    "angular material component",
     "number picker",
+    "stepper",
     "material"
   ],
   "license": "MIT",
   "contributors": [
-    "Thomas Meitz <thomas.meitz@retailify.de>",
+    "Thomas Meitz <info@retailify.de>",
     "Tim Meitz <info@danios.net>"
   ],
   "bugs": {
