@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngx-mat-numberpicker',
@@ -6,85 +6,97 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 })
 export class NumberPickerComponent implements OnInit {
 
-    private numberPickerValue: number;
-    private decreaseButtonDisabled: boolean = false;
-    private increaseButtonDisabled: boolean = false;
-    private hintStartText: string = '';
-    private hintEndText: string = '';
+  private numberPickerValue: number;
+  private decreaseButtonDisabled: boolean = false;
+  private increaseButtonDisabled: boolean = false;
+  private hintStartText: string = '';
+  private hintEndText: string = '';
 
-    @Input() disabled: boolean = false;
-    @Input() min: number = 0;
-    @Input() max: number = 50;
-    @Input() default: number;
-    @Input() starttext: string;
-    @Input() endtext: string;
+  @Input() disabled: boolean = false;
+  @Input() min: number = 0;
+  @Input() max: number = 50;
+  @Input() default: number;
+  @Input() starttext: string;
+  @Input() endtext: string;
 
-    @Output() onChange: EventEmitter<number> = new EventEmitter();
+  @Output() onChange: EventEmitter<number> = new EventEmitter();
 
-    constructor() {
-        this.numberPickerValue = 0;
+  constructor() {
+    this.numberPickerValue = 0;
+  }
+
+  ngOnInit(): void {
+    this.setDefaultValue();
+    this.setHintTexts();
+    this.checkButtons();
+  }
+
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent): void {
+
+    if (event.keyCode === 39) {
+      this.increase(event);
     }
 
-    ngOnInit(): void {
-        this.setDefaultValue();
-        this.setHintTexts();
-        this.checkButtons();
+    if (event.keyCode === 37) {
+      this.decrease(event);
     }
+  }
 
-    increase(event: any): void {
-        event.preventDefault();
-        if (this.numberPickerValue < this.max) {
-            this.numberPickerValue++;
-            this.onChange.emit(this.numberPickerValue);
-        }
-        this.checkButtons();
+  increase(event: any): void {
+    event.preventDefault();
+    if (this.numberPickerValue < this.max) {
+      this.numberPickerValue++;
+      this.onChange.emit(this.numberPickerValue);
     }
+    this.checkButtons();
+  }
 
-    decrease(event: any): void {
-        event.preventDefault();
-        if (this.getValue() > this.min) {
-            this.numberPickerValue--;
-            this.onChange.emit(this.numberPickerValue);
-        }
-        this.checkButtons();
+  decrease(event: any): void {
+    event.preventDefault();
+    if (this.getValue() > this.min) {
+      this.numberPickerValue--;
+      this.onChange.emit(this.numberPickerValue);
     }
+    this.checkButtons();
+  }
 
-    checkButtons(): void {
-        this.increaseButtonDisabled = false;
+  checkButtons(): void {
+    this.increaseButtonDisabled = false;
 
-        this.decreaseButtonDisabled = this.getValue() <= this.min;
-        if (this.numberPickerValue >= this.max) {
-            this.increaseButtonDisabled = true;
-        }
+    this.decreaseButtonDisabled = this.getValue() <= this.min;
+    if (this.numberPickerValue >= this.max) {
+      this.increaseButtonDisabled = true;
     }
+  }
 
-    setDefaultValue(): void {
-        if (this.default === null || this.default === undefined) {
-            this.setValue(0);
-        } else {
-            this.setValue(this.default);
-        }
+  setDefaultValue(): void {
+    if (this.default === null || this.default === undefined) {
+      this.setValue(0);
+    } else {
+      this.setValue(this.default);
     }
+  }
 
-    setHintTexts(): void {
-        this.setHintStartText(this.starttext);
-        this.setHintEndText(this.endtext);
-    }
+  setHintTexts(): void {
+    this.setHintStartText(this.starttext);
+    this.setHintEndText(this.endtext);
+  }
 
-    getValue(): number {
-        return this.numberPickerValue;
-    }
+  getValue(): number {
+    return this.numberPickerValue;
+  }
 
-    setValue(value: number): void {
-        this.numberPickerValue = value;
-    }
+  setValue(value: number): void {
+    this.numberPickerValue = value;
+  }
 
-    setHintStartText(value: string): void {
-        this.hintStartText = value;
-    }
+  setHintStartText(value: string): void {
+    this.hintStartText = value;
+  }
 
-    setHintEndText(value: string): void {
-        this.hintEndText = value;
-    }
+  setHintEndText(value: string): void {
+    this.hintEndText = value;
+  }
 
 }
