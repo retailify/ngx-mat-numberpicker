@@ -4,6 +4,8 @@ Angular numberpicker component based on Angular Material.
 
 ![alt example image](https://raw.githubusercontent.com/retailify/ngx-mat-numberpicker/master/images/example.png)
 
+You can use the left arrow key to decrement and the right arrow key to increment on your keyboard or use the buttons to change the value of the component.
+
 ## Installation
 
 To install this library (component), run:
