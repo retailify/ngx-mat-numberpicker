@@ -12,7 +12,7 @@ import { NumberPickerModule }  from '../dist';
 @Component({
     selector: 'qs-app',
     template: `<ngx-mat-numberpicker [min]="1" [max]="6" [default]="1"
-                                     [starttext]="'Hello World'" [endtext]="'Hello World'"
+                                     [starttext]="'min: 1'" [endtext]="'max: 6'"
                                      [disabled]="true" (onChange)="onValueChanged($event)"></ngx-mat-numberpicker>
                <p>Current Value: {{currentValue}}</p>`,
 })
